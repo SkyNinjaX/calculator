@@ -17,3 +17,13 @@ A modern web calculator with **two-line display**, **keyboard support**, and **T
 ## How to Run
 1. Clone or download this repository
 2. Open `index.html` in any browser
+
+Tech Stack
+
+1. HTML
+2. JavaScript
+3. Tailwind CSS (CDN)
+
+Author
+
+SkyNinjaX
