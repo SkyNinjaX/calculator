@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+
+  <!-- Tailwind CDN -->
+  <script src="tw.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .btn {
+      @apply h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150;
+    }
+    .op {
+      @apply bg-indigo-600 hover:bg-indigo-500;
+    }
+    .danger {
+      @apply bg-red-500 hover:bg-red-400;
+    }
+    .equal {
+      @apply bg-emerald-500 hover:bg-emerald-400;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800">
+
+  <div class="backdrop-blur-xl bg-white/10 p-6 rounded-3xl w-90 shadow-2xl border border-white/20 ">
+
+    <h2 class="text-center text-white text-xl font-semibold mb-4">
+      Calculator
+    </h2>
+
+    <input
+      type="text"
+      id="display"
+      disabled
+      class="w-full h-12 mb-5 text-right text-3xl px-4 rounded-xl 
+      bg-black/40 text-white placeholder-gray-400"
+      placeholder="0"
+    />
+    <input type="text"
+      id="result"
+      disabled
+      class="w-full h-10 mb-5 text-right text-3xl px-4 rounded-xl 
+      bg-black/40 text-gray-500 placeholder-gray-400" placeholder="Ans = 0">
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 danger col-span-2">C</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 danger">⌫</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 op">/</button>
+
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">7</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">8</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">9</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 op">*</button>
+
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">4</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">5</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">6</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 op">-</button>
+
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">1</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">2</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">3</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 op">+</button>
+
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 col-span-2">0</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150">.</button>
+      <button class="btn h-14 rounded-xl text-lg font-semibold text-white 
+      bg-gray-700 hover:bg-gray-600 active:scale-95 
+      transition-all duration-150 equal">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
